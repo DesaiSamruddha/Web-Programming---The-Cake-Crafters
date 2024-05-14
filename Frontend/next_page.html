@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cake Ordering Website - Checkout</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .checkout-form {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .checkout-form input,
+    .checkout-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .checkout-form button {
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .checkout-form .shipping-address {
+      margin-top: 20px;
+    }
+
+    .checkout-form .shipping-address h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .checkout-form .shipping-address input {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+
+    .checkout-form .shipping-address select {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Checkout</h1>
+
+  <form class="checkout-form" action="/checkout" method="post">
+
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="email" placeholder="Your email">
+    <input type="tel" name="phone" placeholder="Your phone number">
+
+    <div class="shipping-address">
+      <h3>Shipping address</h3>
+      <input type="text" name="shipping_address_1" placeholder="Address line 1">
+      <input type="text" name="shipping_address_2" placeholder="Address line 2">
+      <input type="text" name="shipping_city" placeholder="City">
+      <input type="text" name="shipping_state" placeholder="State">
+      <input type="text" name="shipping_zip_code" placeholder="Zip code">
+    </div>
+
+    <button type="submit">Place order</button>
+
+  </form>
+
+</body>
+</html>
